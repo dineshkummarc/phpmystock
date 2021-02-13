@@ -4,7 +4,7 @@ require_once 'php_action/db_connect.php';
 session_start();
 
 if(isset($_SESSION['userId'])) {
-	header('location: http://localhost/stock/dashboard.php');	
+	header('location: http://local.rocket.co.in:8081/test/stock/dashboard.php');	
 }
 
 $errors = array();
@@ -39,7 +39,7 @@ if($_POST) {
 				// set session
 				$_SESSION['userId'] = $user_id;
 
-				header('location: http://localhost/stock/dashboard.php');	
+				header('location: http://local.rocket.co.in:8081/test/stock/dashboard.php');	
 			} else{
 				
 				$errors[] = "Incorrect username/password combination";
